@@ -1,23 +1,38 @@
 console.log('Loading figures.js');
 
 // Squares
-const squareSide = 10;
-const squarePerimeter = 4 * squareSide;
-const squareArea = squareSide * squareSide;
+function squarePerimeter(side) {
+  return 4 * side;
+}
 
+function squareArea(side) {
+  return side * side;
+}
+
+squarePerimeter(squareSide);
+squareArea(squareSide);
 
 // Triangles
-const triangleFirstSide = 10;
-const triangleSecondSide = 4;
-const triangleThirdSide = 3;
-const trianglePerimeter = (triangleFirstSide + triangleSecondSide + triangleThirdSide) / 2;
+function trianglePerimeter(firstSide, secondSide, thirdSide) {
+  return firstSide + secondSide + thirdSide;
+}
 
-const triangleWidth = triangleFirstSide;
-const triangleHeight = triangleSecondSide;
-const triangleArea = triangleWidth * triangleHeight;
+function triangleArea(width, height) {
+  return (width * height) / 2;
+}
 
 // Circles
-const circleRadius = 10;
-const circleArea = Math.PI * circleRadius * circleRadius;
-const circleDiameter = circleRadius * 2;
-const circlePerimeter = circleDiameter * Math.PI;
+
+function circleDiameter(radius) {
+  return radius * 2;
+}
+
+function circlePerimeter(radius) {
+  const diameter = circleDiameter(radius);
+  return diameter * Math.PI;
+}
+
+function circleArea(radius) {
+  return Math.PI * radius * radius;
+}
+
