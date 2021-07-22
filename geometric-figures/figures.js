@@ -9,8 +9,6 @@ function squareArea(side) {
   return side * side;
 }
 
-squarePerimeter(squareSide);
-squareArea(squareSide);
 
 // Triangles
 function trianglePerimeter(firstSide, secondSide, thirdSide) {
@@ -36,3 +34,29 @@ function circleArea(radius) {
   return Math.PI * radius * radius;
 }
 
+
+// HTML Events Squares
+const squareInputId = document.getElementById('square-input');
+const squarePerimeterBtn = document.getElementById('square-diameter-btn');
+const squareAreaBtn = document.getElementById('square-area-btn');
+const squareResetBtn = document.getElementById('square-reset-input');
+const squareResult = document.getElementById('square-result');
+
+function calculateSquarePerimeter() {
+  const side = parseInt(squareInputId.value);
+  const perimeter = squarePerimeter(side);
+  squareResult.innerHTML = `Perímetro del cuadrado: ${perimeter}`;
+}
+
+function calculateSquareArea() {
+  const side = parseInt(squareInputId.value);
+  const area = squareArea(side);
+  squareResult.innerHTML = `Área del cuadrado: ${area}`;
+}
+
+squarePerimeterBtn.addEventListener('click', calculateSquarePerimeter);
+squareAreaBtn.addEventListener('click', calculateSquareArea);
+squareResetBtn.addEventListener('click', () => {
+  squareInputId.value = '';
+  squareResult.innerHTML = '';
+});
