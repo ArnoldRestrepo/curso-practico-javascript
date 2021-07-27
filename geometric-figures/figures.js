@@ -19,6 +19,14 @@ function triangleArea(width, height) {
   return (width * height) / 2;
 }
 
+function isocelesTriangleHeight(firstSide, secondSide, base) {
+  if(firstSide === secondSide) {
+    return Math.sqrt(firstSide** 2 - (base** 2 / 4));
+  }
+  return console.warn('Invalid input triangle');
+}
+
+
 // Circles
 
 function circleDiameter(radius) {
