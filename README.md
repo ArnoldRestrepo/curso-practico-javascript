@@ -22,3 +22,12 @@
 ### Circulo
 - El **perímetro o circunferencia** de un circulo es igual a `Diametro * PI`
 - El **Area** de un circulo es igual a `Radio2 * PI`
+
+## Precios, Descuentos, Porcentajes
+
+- Definir las fórmulas
+- Implementar las fórmulas en javascript
+- Crear funciones
+- integrar JavaScript con HTML
+
+- Calcular un descuento: `[P * (100 - D)] / 100`
